@@ -1,4 +1,253 @@
-html {
-  height: 100%;
-  width: 100%;
+:root {
+  --color-primary: #191d2b;
+  --color-secondary: #27AE60;
+  --color-white: #FFFFFF;
+  --color-black: #000;
+  --color-grey0: #f8f8f8;
+  --color-grey-1: #dbe1e8;
+  --color-grey-2: #b2becd;
+  --color-grey-3: #6c7983;
+  --color-grey-4: #454e56;
+  --color-grey-5: #2a2e35;
+  --color-grey-6: #12181b;
+  --br-sm-2: 14px;
+  --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
 }
+
+.light-mode {
+  --color-primary: #FFFFFF;
+  --color-secondary: #F56692;
+  --color-white: #454e56;
+  --color-black: #000;
+  --color-grey0: #f8f8f8;
+  --color-grey-1: #6c7983;
+  --color-grey-2: #6c7983;
+  --color-grey-3: #6c7983;
+  --color-grey-4: #454e56;
+  --color-grey-5: #f8f8f8;
+  --color-grey-6: #12181b;
+  
+}
+
+body {
+  background-color: var(--color-primary);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: var(--color-white);
+  transition: all 0.4s ease-in-out;
+}
+
+h1 {
+  text-align: center;
+  
+  
+}
+
+#theme-toggle {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--color-primary); /* Match the color of the sticky bar */
+  color: var(--color-white); /* Match the color of the sticky bar text */
+}
+
+.light-mode .image-text {
+  color: #fae100; /* Set a darker color for the text during light mode */
+}
+
+
+.light-mode h1 .green-text {
+  color: #F56692; /* Set the color to light theme color */
+}
+.green-text {
+  color: #31966f; /* Set the color to green */
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px; /* Adjust the margin-top value */
+}
+
+.image-container {
+  position: relative;
+  margin: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.image-container img {
+  display: block;
+  height: 200px;
+  width: 200px;
+  border-radius: var(--br-sm-2);
+}
+
+.image-container:hover {
+  transform: scale(1.1);
+  box-shadow: var(--box-shadow-1);
+}
+
+.image-container.zoomed img {
+  height: 300px;
+  width: 300px;object-fit: cover; /* This property ensures the image fits within the container while maintaining its aspect ratio */
+  border-radius: var(--br-sm-2);
+}
+
+.image-text {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  color: var(--color-white); /* Set the text color to white */
+}
+
+
+.image-container.zoomed .image-text {
+  opacity: 1;
+}
+
+/* Add a keyframe animation to unzoom after being clicked */
+@keyframes unzoom {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply the animation to the image-container class */
+.image-container.clicked {
+  animation: unzoom 0.5s ease-in-out;
+}
+
+/* Add this to your existing CSS */
+.sticky-bar {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.sticky-bar a, .sticky-bar button {
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 10px 20px; /* Adjust the padding as needed */
+  margin: 0 10px;
+  transition: color 0.3s;
+  display: inline-block;
+}
+
+.sticky-bar a:hover {
+  color: var(--color-secondary);
+}
+
+.sticky-bar button {
+  font-size: 16px; /* Adjust font size as needed */
+  color: var(--color-white); /* Match the color of the sticky bar content */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.sticky-bar button:hover {
+  color: var(--color-secondary);
+}
+
+
+.loader {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-dot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+  margin: 0 6px;
+  animation: bounce 1.4s infinite;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-12px);
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.contact-link {
+  display: block;
+  padding: 10px 20px;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.sticky-bar .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--color-primary);
+  min-width: 160px;
+  z-index: 1;
+  border-radius: var(--br-sm-2);
+  box-shadow: var(--box-shadow-1);
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--color-grey-1);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* ... (previous CSS rules) */
+
