@@ -15,7 +15,7 @@
 }
 
 .light-mode {
-  --color-primary: #FFFFFF;
+  --color-primary: #E0F2FE;
   --color-secondary: #F56692;
   --color-white: #454e56;
   --color-black: #000;
@@ -53,7 +53,7 @@ h1 {
 }
 
 .light-mode .image-text {
-  color: #fae100; /* Set a darker color for the text during light mode */
+  color: #00ff62; /* Set a darker color for the text during light mode */
 }
 
 
