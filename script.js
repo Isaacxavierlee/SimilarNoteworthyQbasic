@@ -35,6 +35,44 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  const sections = document.querySelectorAll('section');
+  const navItems = document.querySelectorAll('.nav-item');
+
+  navItems.forEach(navItem => {
+    navItem.addEventListener('click', function () {
+      const sectionId = this.getAttribute('data-id');
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  // Add a click event listener to each nav-link
+  navLinks.forEach(navLink => {
+    navLink.addEventListener("click", () => {
+      // Get the target URL from the href attribute of the clicked nav-link
+      const targetUrl = navLink.getAttribute("href");
+      
+      // Navigate to the target URL
+      window.location.href = targetUrl;
+    });
+  });
+
   // Dropdown content
   // ... (existing dropdown content code)
+
+  // Add this script to trigger the animation
+
+const nameElement = document.querySelector('.name');
+
+setTimeout(() => {
+  nameElement.classList.add('show');
+}, 500);
+
+
+  
+  
 });
