@@ -477,23 +477,6 @@ p {
   /* Show active section */
 }
 
-.intro-section {
-  display: flex;
-  align-items: center;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  background-color: var(--color-primary);
-  background-image: url('path/to/your/background-image.jpg');
-  /* Set your background image path */
-  background-size: cover;
-  background-position: center;
-  margin-top: 50px;
-  /* Adjust the margin-top value to create separation from the navigation */
-  margin-bottom: 50px;
-  /* Add margin to create distance from the content below */
-}
 
 .intro-left {
   flex: 1;
@@ -598,6 +581,11 @@ p {
   /* Add margin to create distance from the content below */
 }
 
+
+.light-mode .intro-section {
+  background-image: url('/img/checker.jpg'); /* Light mode background image */
+}
+
 .intro-left {
   flex: 1;
   position: relative;
@@ -606,7 +594,14 @@ p {
   border: 5px solid var(--color-secondary);
   /* Add a border */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
 }
+
+.light-mode .intro-left {
+  border: 5px solid #94847a;/* Change border color to beige in light mode */
+
+}
+
 
 .intro-image {
   width: 100%;
@@ -660,11 +655,9 @@ p {
 }
 
 .light-mode .intro-right h2 {
-  color: #964ad3; /* Use the secondary color for the heading */
+  color: #94847a; /* Use the secondary color for the heading */
 }
 
 .light-mode .intro-right p {
   color: var(--color-white); /* Use the grey-3 color for the paragraph text */
 }
-
-
