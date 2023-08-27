@@ -355,23 +355,30 @@ h1 {
 /* Media query for screens with max width 768px (typical mobile screens) */
 @media (max-width: 768px) {
   .sticky-bar {
-    padding: 5px 0; /* Adjust padding for smaller screens */
+    padding: 5px 0;
+    /* Adjust padding for smaller screens */
   }
 
   .sticky-bar a,
   .sticky-bar button {
-    padding: 5px 10px; /* Adjust padding for smaller screens */
-    font-size: 14px; /* Adjust font size for smaller screens */
+    padding: 5px 10px;
+    /* Adjust padding for smaller screens */
+    font-size: 14px;
+    /* Adjust font size for smaller screens */
   }
 
   .dropdown-content {
-    min-width: 120px; /* Adjust min width for smaller screens */
-    box-shadow: none; /* Remove box shadow on smaller screens */
+    min-width: 120px;
+    /* Adjust min width for smaller screens */
+    box-shadow: none;
+    /* Remove box shadow on smaller screens */
   }
 
   .dropdown-content a {
-    padding: 5px 10px; /* Adjust padding for smaller screens */
-    font-size: 14px; /* Adjust font size for smaller screens */
+    padding: 5px 10px;
+    /* Adjust padding for smaller screens */
+    font-size: 14px;
+    /* Adjust font size for smaller screens */
   }
 }
 
