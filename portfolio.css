@@ -39,6 +39,11 @@ body.light-mode {
   color: var(--color-black);
 }
 
+@media (max-width: 768px) {
+  /* Adjust styles for mobile screens */
+  .container {
+    padding: 20px;
+  }
 /* Add more styles using the light mode color scheme */
 
 

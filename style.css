@@ -39,6 +39,7 @@ body.light-mode {
   color: var(--color-black);
 }
 
+
 /* Add more styles using the light mode color scheme */
 
 
@@ -257,6 +258,7 @@ h1 {
 }
 
 /* Default styles for the sticky bar */
+/* Default styles for the sticky bar */
 .sticky-bar {
   background-color: var(--color-primary);
   position: sticky;
@@ -314,7 +316,6 @@ h1 {
   display: block;
 }
 
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -332,18 +333,40 @@ h1 {
   text-decoration: none;
   transition: background-color 0.3s;
   border-bottom: none;
-  /* Remove underline */
 }
 
 .dropdown-content a:hover {
   background-color: var(--color-grey-1);
   text-decoration: none;
-  /* Remove underline on hover */
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+/* Media query for screens with max width 768px (typical mobile screens) */
+@media (max-width: 768px) {
+  .sticky-bar {
+    padding: 5px 0; /* Adjust padding for smaller screens */
+  }
+
+  .sticky-bar a,
+  .sticky-bar button {
+    padding: 5px 10px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .dropdown-content {
+    min-width: 120px; /* Adjust min width for smaller screens */
+    box-shadow: none; /* Remove box shadow on smaller screens */
+  }
+
+  .dropdown-content a {
+    padding: 5px 10px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
 
 /* ... (previous CSS rules) */
 
