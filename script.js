@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
   themeToggle.addEventListener("click", function() {
     body.classList.toggle("light-mode");
   });
+  themeToggle.addEventListener('click', toggleTheme);
 
   // Handle smooth scrolling for navigation links
   const navItems = document.querySelectorAll('.nav-item');
@@ -38,19 +39,5 @@ document.addEventListener("DOMContentLoaded", function() {
       imageContainer.classList.remove('zoomed');
     });
   });
-
-  // Initialize Swiper
-var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 1, // Number of slides per view
-  spaceBetween: 20, // Space between slides
-  loop: true, // Enable loop mode
-  navigation: {
-    nextEl: '.swiper-button-next', // Next button class
-    prevEl: '.swiper-button-prev', // Previous button class
-  },
-});
-
-
-
 
 });
