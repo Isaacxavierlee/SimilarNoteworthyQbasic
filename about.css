@@ -22,10 +22,8 @@
 }
 
 .light-mode {
-  --color-primary: #DDD0C8;
-  /* Beige color */
-  --color-secondary: #323232;
-  /* Dark grey color */
+  --color-primary: #DDD0C8; /* Beige color */
+  --color-secondary: #323232; /* Dark grey color */
   --color-white: #FFFFFF;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -36,17 +34,12 @@
   --color-grey-5: #2a2e35;
   --color-grey-6: #12181b;
 }
-
 body.light-mode {
-  background-color: #DDD0C8;
+  background-color:#DDD0C8;
   color: var(--color-black);
 }
 
-@media (max-width: 768px) {
-  /* Adjust styles for mobile screens */
-  .container {
-    padding: 20px;
-  }
+
 /* Add more styles using the light mode color scheme */
 
 
@@ -57,47 +50,6 @@ body {
   color: var(--color-white);
   transition: all 0.4s ease-in-out;
 }
-
-#theme-toggle {
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  background-color: var(--color-primary);
-  /* Match the color of the sticky bar */
-  color: var(--color-white);
-  /* Match the color of the sticky bar text */
-}
-
-.light-mode .image-text {
-  color: #F56692;
-  /* Set a darker color for the text during light mode */
-}
-
-.light-mode h1 {
-  color: #ffffff;
-  /* Set the color to light theme color */
-}
-
-.light-mode h1 .green-text {
-  color: #964ad3;
-  /* Set the color to light theme color */
-}
-
-.green-text {
-  color: #31966f;
-  /* Set the color to green */
-}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -131,8 +83,7 @@ body {
 }
 
 .light-mode .bottom-navigation {
-  background-color: #DDD0C8;
-  /* Change background to beige */
+  background-color: #DDD0C8; /* Change background to beige */
   /* ... (other styles) */
 }
 
@@ -165,20 +116,19 @@ body {
 }
 
 .light-mode .nav-item:hover {
-  color: #964ad3;
+  color:  #964ad3; 
 }
 
 .light-mode .sticky-bar a,
 .light-mode .sticky-bar button {
-  color: var(--color-grey-4);
-  /* Change color to dark grey */
+  color: var(--color-grey-4); /* Change color to dark grey */
   text-decoration: none;
   padding: 10px 20px;
   /* ... (other styles) */
 }
 
 .light-mode .sticky-bar a:hover {
-  color: #964ad3;
+  color: #964ad3; 
   /* ... (other styles) */
 }
 
