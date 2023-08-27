@@ -22,8 +22,10 @@
 }
 
 .light-mode {
-  --color-primary: #DDD0C8; /* Beige color */
-  --color-secondary: #323232; /* Dark grey color */
+  --color-primary: #DDD0C8;
+  /* Beige color */
+  --color-secondary: #323232;
+  /* Dark grey color */
   --color-white: #FFFFFF;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -34,8 +36,9 @@
   --color-grey-5: #2a2e35;
   --color-grey-6: #12181b;
 }
+
 body.light-mode {
-  background-color:#DDD0C8;
+  background-color: #DDD0C8;
   color: var(--color-black);
 }
 
@@ -73,7 +76,7 @@ h1 {
   /* Set a darker color for the text during light mode */
 }
 
-.light-mode h1  {
+.light-mode h1 {
   color: #ffffff;
   /* Set the color to light theme color */
 }
@@ -95,9 +98,12 @@ h1 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden; /* Hide overflowing borders */
-  border: 8px solid var(--color-primary); /* Dark or light theme border color */
-  border-radius: 20px; /* Curved border radius */
+  overflow: hidden;
+  /* Hide overflowing borders */
+  border: 8px solid var(--color-primary);
+  /* Dark or light theme border color */
+  border-radius: 20px;
+  /* Curved border radius */
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -119,7 +125,8 @@ h1 {
 }
 
 .light-mode .container-with-background {
-  background-image: url("/img/day.jpg"); /* Light mode background image */
+  background-image: url("/img/day.jpg");
+  /* Light mode background image */
 }
 
 /* Keyframes for the text animation */
@@ -127,6 +134,7 @@ h1 {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-5px);
   }
@@ -368,7 +376,8 @@ h1 {
 }
 
 .light-mode .bottom-navigation {
-  background-color: #DDD0C8; /* Change background to beige */
+  background-color: #DDD0C8;
+  /* Change background to beige */
   /* ... (other styles) */
 }
 
@@ -401,19 +410,20 @@ h1 {
 }
 
 .light-mode .nav-item:hover {
-  color:  #964ad3; 
+  color: #964ad3;
 }
 
 .light-mode .sticky-bar a,
 .light-mode .sticky-bar button {
-  color: var(--color-grey-4); /* Change color to dark grey */
+  color: var(--color-grey-4);
+  /* Change color to dark grey */
   text-decoration: none;
   padding: 10px 20px;
   /* ... (other styles) */
 }
 
 .light-mode .sticky-bar a:hover {
-  color: #964ad3; 
+  color: #964ad3;
   /* ... (other styles) */
 }
 
@@ -584,7 +594,8 @@ p {
 
 
 .light-mode .intro-section {
-  background-image: url('/img/checker.jpg'); /* Light mode background image */
+  background-image: url('/img/checker.jpg');
+  /* Light mode background image */
 }
 
 .intro-left {
@@ -599,7 +610,8 @@ p {
 }
 
 .light-mode .intro-left {
-  border: 5px solid #94847a;/* Change border color to beige in light mode */
+  border: 5px solid #94847a;
+  /* Change border color to beige in light mode */
 
 }
 
@@ -621,13 +633,15 @@ p {
 .intro-right {
   flex: 2;
   padding-left: 40px;
-  color: var(--color-white); /* Set text color to white */
+  color: var(--color-white);
+  /* Set text color to white */
 }
 
 .intro-right h2 {
   font-size: 28px;
   margin-bottom: 15px;
-  color: var(--color-secondary); /* Use the secondary color for the heading */
+  color: var(--color-secondary);
+  /* Use the secondary color for the heading */
 }
 
 .intro-right p {
@@ -652,15 +666,16 @@ p {
 }
 
 .light-mode .intro-right {
-  color: var(--color-white); /* Set text color to dark grey */
+  color: var(--color-white);
+  /* Set text color to dark grey */
 }
 
 .light-mode .intro-right h2 {
-  color: #94847a; /* Use the secondary color for the heading */
+  color: #94847a;
+  /* Use the secondary color for the heading */
 }
 
 .light-mode .intro-right p {
-  color: var(--color-white); /* Use the grey-3 color for the paragraph text */
+  color: var(--color-white);
+  /* Use the grey-3 color for the paragraph text */
 }
-
-

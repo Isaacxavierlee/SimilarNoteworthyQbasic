@@ -7,19 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   themeToggle.addEventListener('click', toggleTheme);
 
-  // Handle smooth scrolling for navigation links
-  const navItems = document.querySelectorAll('.nav-item');
-
-  navItems.forEach(navItem => {
-    navItem.addEventListener('click', function() {
-      const sectionId = this.getAttribute('data-id');
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-
   // Handle image container zoom and unzoom
   const imageContainers = document.querySelectorAll('.image-container');
 
@@ -29,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
       imageContainer.classList.toggle('zoomed');
     });
 
+    // Mouse-based interaction
     container.addEventListener('mouseenter', function() {
       const imageContainer = this;
       imageContainer.classList.add('zoomed');
@@ -38,31 +26,28 @@ document.addEventListener("DOMContentLoaded", function() {
       const imageContainer = this;
       imageContainer.classList.remove('zoomed');
     });
-  });
 
-  // makePage.js
-  function makePage() {
-    const navItems = document.querySelectorAll('.nav-item');
-
-    navItems.forEach(navItem => {
-      navItem.addEventListener('click', function() {
-        const sectionId = this.getAttribute('data-id');
-        const section = document.getElementById(sectionId);
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
+    // Touch-based interaction
+    let initialTouchPosition = null;
+    container.addEventListener('touchstart', function(event) {
+      initialTouchPosition = event.touches[0].clientX;
     });
-  }
 
+    container.addEventListener('touchmove', function(event) {
+      if (!initialTouchPosition) return;
 
+      const currentTouchPosition = event.touches[0].clientX;
+      const touchDelta = currentTouchPosition - initialTouchPosition;
 
+      if (Math.abs(touchDelta) > 30) {
+        const imageContainer = this;
+        imageContainer.classList.toggle('zoomed');
+        initialTouchPosition = null;
+      }
+    });
 
-
-
-
-
-
-
-
+    container.addEventListener('touchend', function() {
+      initialTouchPosition = null;
+    });
+  });
 });
