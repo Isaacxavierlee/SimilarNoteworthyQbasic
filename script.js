@@ -40,4 +40,29 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
+  // makePage.js
+  function makePage() {
+    const navItems = document.querySelectorAll('.nav-item');
+
+    navItems.forEach(navItem => {
+      navItem.addEventListener('click', function() {
+        const sectionId = this.getAttribute('data-id');
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  }
+
+
+
+
+
+
+
+
+
+
+
 });
