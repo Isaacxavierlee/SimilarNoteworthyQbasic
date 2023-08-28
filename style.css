@@ -274,24 +274,13 @@ h1 {
   margin-left: 30px; /* Adjust as needed */
 }
 
-.logo img {
-  width: 40px; /* Adjust logo width */
-  height: auto;
-  margin-right: 10px;
-}
-
-.logo span {
-  font-weight: bold;
-}
-
 .right-section {
   display: flex;
   align-items: center;
   margin-right: 30px; /* Adjust as needed */
 }
 
-
-
+/* Common styles for both light and dark modes */
 .sticky-bar a,
 .sticky-bar button {
   color: var(--color-white);
@@ -310,7 +299,6 @@ h1 {
 
 .sticky-bar button {
   font-size: 16px;
-  color: var(--color-white);
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -330,7 +318,6 @@ h1 {
 .contact-link {
   display: block;
   padding: 10px 20px;
-  color: var(--color-white);
   text-decoration: none;
 }
 
@@ -346,13 +333,12 @@ h1 {
   z-index: 1;
   border-radius: var(--br-sm-2);
   box-shadow: var(--box-shadow-1);
-  z-index: 1001; /* Make the dropdown appear above the sticky bar */
+  z-index: 1001;
 }
 
 .dropdown-content a {
   display: block;
   padding: 10px 20px;
-  color: var(--color-white);
   text-decoration: none;
   transition: background-color 0.3s;
   border-bottom: none;
@@ -371,29 +357,22 @@ h1 {
 @media (max-width: 768px) {
   .sticky-bar {
     padding: 5px 0;
-    /* Adjust padding for smaller screens */
   }
 
   .sticky-bar a,
   .sticky-bar button {
     padding: 5px 10px;
-    /* Adjust padding for smaller screens */
     font-size: 14px;
-    /* Adjust font size for smaller screens */
   }
 
   .dropdown-content {
     min-width: 120px;
-    /* Adjust min width for smaller screens */
     box-shadow: none;
-    /* Remove box shadow on smaller screens */
   }
 
   .dropdown-content a {
     padding: 5px 10px;
-    /* Adjust padding for smaller screens */
     font-size: 14px;
-    /* Adjust font size for smaller screens */
   }
 }
 
@@ -456,25 +435,7 @@ h1 {
   color: #964ad3;
 }
 
-.light-mode .sticky-bar a,
-.light-mode .sticky-bar button {
-  color: var(--color-grey-4);
-  /* Change color to dark grey */
-  text-decoration: none;
-  padding: 5px 10px;
-  font-size: 14px;
-  /* ... (other styles) */
-}
 
-.light-mode .sticky-bar a:hover {
-  color: #964ad3;
-  /* ... (other styles) */
-}
-
-.light-mode .sticky-bar button:hover {
-  color: var(--color-secondary);
-  /* ... (other styles) */
-}
 
 
 
