@@ -370,7 +370,8 @@ h1 {
 /* Media query for screens with max width 768px (typical mobile screens) */
 @media (max-width: 768px) {
   .sticky-bar {
-    padding: 5px 20px; /* Adjust padding for smaller screens */
+    padding: 5px 0;
+    /* Adjust padding for smaller screens */
   }
 
   .sticky-bar a,
