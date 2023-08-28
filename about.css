@@ -22,8 +22,10 @@
 }
 
 .light-mode {
-  --color-primary: #DDD0C8; /* Beige color */
-  --color-secondary: #323232; /* Dark grey color */
+  --color-primary: #DDD0C8;
+  /* Beige color */
+  --color-secondary: #323232;
+  /* Dark grey color */
   --color-white: #FFFFFF;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -34,8 +36,9 @@
   --color-grey-5: #2a2e35;
   --color-grey-6: #12181b;
 }
+
 body.light-mode {
-  background-color:#DDD0C8;
+  background-color: #DDD0C8;
   color: var(--color-black);
 }
 
@@ -83,7 +86,8 @@ body {
 }
 
 .light-mode .bottom-navigation {
-  background-color: #DDD0C8; /* Change background to beige */
+  background-color: #DDD0C8;
+  /* Change background to beige */
   /* ... (other styles) */
 }
 
@@ -116,23 +120,185 @@ body {
 }
 
 .light-mode .nav-item:hover {
-  color:  #964ad3; 
+  color: #964ad3;
 }
 
 .light-mode .sticky-bar a,
 .light-mode .sticky-bar button {
-  color: var(--color-grey-4); /* Change color to dark grey */
+  color: var(--color-grey-4);
+  /* Change color to dark grey */
   text-decoration: none;
   padding: 10px 20px;
   /* ... (other styles) */
 }
 
 .light-mode .sticky-bar a:hover {
-  color: #964ad3; 
+  color: #964ad3;
   /* ... (other styles) */
 }
 
 .light-mode .sticky-bar button:hover {
   color: var(--color-secondary);
   /* ... (other styles) */
+}
+
+.about-stats {
+  padding-bottom: 4rem;
+}
+
+.about-stats .progress-bars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 columns */
+  grid-gap: 1rem;
+  justify-content: center;
+  /* Center the grid horizontally */
+  align-items: center;
+  /* Center the grid vertically */
+}
+
+.about-stats .progress-bars .progress-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+  /* Adjust padding to make the box smaller */
+  background-color: var(--color-primary-light);
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 1px solid var(--color-primary);
+  /* Smaller border */
+}
+
+
+.about-stats .progress-bars .progress-bar:hover {
+  transform: scale(1.0);
+  border-color: var(--color-secondary);
+  /* Change border color on hover */
+  box-shadow: 0px 0px 20px var(--color-secondary);
+  /* Glow effect on hover */
+}
+
+.about-stats .progress-bars .progress-bar .prog-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .prog-text {
+  color: var(--color-grey-2);
+  margin-top: 0.5rem;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress {
+  width: 80%;
+  /* Adjust the width as needed */
+  height: 0.35rem;
+  background-color: var(--color-grey-4);
+  margin-top: 1rem;
+  position: relative;
+  border-radius: 3px;
+}
+
+
+.about-stats .progress-bars .progress-bar .progress-con .progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--color-secondary);
+  transition: all 0.4s ease-in-out;
+  width: 100%;
+  /* Show the full progress bar */
+  border-radius: 3px;
+}
+
+/* Add width for different skills */
+.about-stats .progress-bars .progress-bar .progress-con .progress .html {
+  width: 80%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .css {
+  width: 95%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .js {
+  width: 75%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .react {
+  width: 60%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .node {
+  width: 87%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .python {
+  width: 70%;
+}
+
+
+
+.stat-title {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 3.5rem 0;
+  position: relative;
+}
+
+.stat-title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 40%;
+  height: 1px;
+  background-color: var(--color-grey-5);
+  transform: translateX(-50%);
+}
+
+
+
+.timeline-container {
+  max-width: 600px;
+  /* Adjust the maximum width */
+  margin: 0 auto;
+  /* Center the container */
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.timeline-title {
+  border: 1px solid var(--color-secondary);
+  border-radius: 10px;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.timeline-title:hover {
+  background-color: var(--color-secondary);
+  color: white;
+  transform: scale(1.05);
+}
+
+.timeline-title h5 {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.timeline-content {
+  display: none;
+  margin-top: 1rem;
 }

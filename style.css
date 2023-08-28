@@ -60,17 +60,6 @@ h1 {
 
 }
 
-#theme-toggle {
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  background-color: var(--color-primary);
-  /* Match the color of the sticky bar */
-  color: var(--color-white);
-  /* Match the color of the sticky bar text */
-}
-
 .light-mode .image-text {
   color: #F56692;
   /* Set a darker color for the text during light mode */
@@ -265,18 +254,43 @@ h1 {
   animation: unzoom 0.5s ease-in-out;
 }
 
-/* Default styles for the sticky bar */
+
 /* Default styles for the sticky bar */
 .sticky-bar {
   background-color: var(--color-primary);
   position: sticky;
   top: 0;
   display: flex;
-  justify-content: center;
+  display: flex;
+  justify-content: space-between; /* Distribute sections on the left and right */
   align-items: center;
-  padding: 10px 0;
-  z-index: 1000;
+  padding: 10px 20px; /* Add padding on the sides */
+   z-index: 1000; /* Ensure the sticky bar appears above other elements */
 }
+
+.left-section {
+  display: flex;
+  align-items: center;
+  margin-left: 30px; /* Adjust as needed */
+}
+
+.logo img {
+  width: 40px; /* Adjust logo width */
+  height: auto;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-weight: bold;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  margin-right: 30px; /* Adjust as needed */
+}
+
+
 
 .sticky-bar a,
 .sticky-bar button {
@@ -332,6 +346,7 @@ h1 {
   z-index: 1;
   border-radius: var(--br-sm-2);
   box-shadow: var(--box-shadow-1);
+  z-index: 1001; /* Make the dropdown appear above the sticky bar */
 }
 
 .dropdown-content a {
