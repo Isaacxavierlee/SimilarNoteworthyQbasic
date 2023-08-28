@@ -304,6 +304,9 @@ body {
 }
 
 /* Common styles for both light and dark modes */
+
+
+
 .sticky-bar a,
 .sticky-bar button {
   color: var(--color-white);

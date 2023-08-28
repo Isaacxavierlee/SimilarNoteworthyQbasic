@@ -52,6 +52,125 @@ body {
 }
 
 
+.sticky-bar {
+  background-color: var(--color-primary);
+  position: sticky;
+  top: 0;
+  display: flex;
+  display: flex;
+  justify-content: space-between; /* Distribute sections on the left and right */
+  align-items: center;
+  padding: 10px 20px; /* Add padding on the sides */
+   z-index: 1000; /* Ensure the sticky bar appears above other elements */
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  margin-left: 30px; /* Adjust as needed */
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  margin-right: 30px; /* Adjust as needed */
+}
+
+/* Common styles for both light and dark modes */
+.sticky-bar a,
+.sticky-bar button {
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  transition: color 0.3s;
+  display: inline-block;
+  border-bottom: none;
+}
+
+.sticky-bar a:hover {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+.sticky-bar button {
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.sticky-bar button:hover {
+  color: var(--color-secondary);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.contact-link {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.sticky-bar .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--color-primary);
+  min-width: 160px;
+  z-index: 1;
+  border-radius: var(--br-sm-2);
+  box-shadow: var(--box-shadow-1);
+  z-index: 1001;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--color-grey-1);
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Media query for screens with max width 768px (typical mobile screens) */
+@media (max-width: 768px) {
+  .sticky-bar {
+    padding: 5px 0;
+  }
+
+  .sticky-bar a,
+  .sticky-bar button {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .dropdown-content {
+    min-width: 120px;
+    box-shadow: none;
+  }
+
+  .dropdown-content a {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+}
 
 
 
