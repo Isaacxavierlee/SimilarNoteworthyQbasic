@@ -51,7 +51,6 @@ body {
   transition: all 0.4s ease-in-out;
 }
 
-
 .bottom-navigation {
   position: fixed;
   bottom: 0;
@@ -203,87 +202,4 @@ body {
     padding: 5px 10px;
     font-size: 14px;
   }
-}
-
-
-
-
-
-
-
-
-
-
-.bottom-navigation {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--color-grey-6);
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 10px 0;
-  z-index: 1000;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
-  /* Add a shadow to the bottom navigation */
-  margin-top: 50px;
-  /* Adjust the margin-top value to create separation from the intro section */
-}
-
-.light-mode .bottom-navigation {
-  background-color: #DDD0C8; /* Change background to beige */
-  /* ... (other styles) */
-}
-
-.nav-link {
-  text-align: center;
-  text-decoration: none;
-  color: var(--color-white);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.nav-item {
-  cursor: pointer;
-  font-size: 20px;
-  margin-bottom: 5px;
-  /* Add some margin between icon and label */
-  transition: color 0.3s;
-  color: var(--color-white);
-  /* Set the default color for the icons */
-}
-
-.nav-item:hover {
-  color: var(--color-secondary);
-}
-
-/* Add the following rules for light mode */
-.light-mode .nav-item {
-  color: var(--color-black);
-}
-
-.light-mode .nav-item:hover {
-  color:  #964ad3; 
-}
-
-.light-mode .sticky-bar a,
-.light-mode .sticky-bar button {
-  color: var(--color-grey-4); /* Change color to dark grey */
-  text-decoration: none;
-  padding: 10px 20px;
-  /* ... (other styles) */
-}
-
-.light-mode .sticky-bar a:hover {
-  color: #964ad3; 
-  /* ... (other styles) */
-}
-
-.light-mode .sticky-bar button:hover {
-  color: var(--color-secondary);
-  /* ... (other styles) */
 }
