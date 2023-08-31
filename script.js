@@ -60,8 +60,8 @@ function type() {
 
 function erase() {
     const currentPhrase = phrases[phraseIndex];
-    const typingDelay = 100; // Adjust typing speed here
-    const erasingDelay = 50; // Adjust erasing speed here
+    const typingDelay = 1000; // Adjust typing speed here
+    const erasingDelay = 100; // Adjust erasing speed here
 
     if (charIndex > 0) {
         typewriter.textContent = currentPhrase.substring(0, charIndex - 1);
