@@ -27,3 +27,50 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+const phrases = [
+    "Welcome to my webpage.",
+    "Hi, I'm Isaac Xavier.",
+    "A Web Developer.",
+    "Sharing my thoughts and ideas.",
+    "Showcasing my projects."
+];
+
+const typewriter = document.getElementById('typewriter');
+let phraseIndex = 0;
+let charIndex = 0;
+
+function type() {
+    if (phraseIndex >= phrases.length) {
+        phraseIndex = 0;
+    }
+
+    const currentPhrase = phrases[phraseIndex];
+    const typingDelay = 100; // Adjust typing speed here
+    const erasingDelay = 50; // Adjust erasing speed here
+
+    if (charIndex < currentPhrase.length) {
+        typewriter.textContent += currentPhrase.charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingDelay);
+    } else {
+        setTimeout(erase, erasingDelay);
+    }
+}
+
+function erase() {
+    const currentPhrase = phrases[phraseIndex];
+    const typingDelay = 100; // Adjust typing speed here
+    const erasingDelay = 50; // Adjust erasing speed here
+
+    if (charIndex > 0) {
+        typewriter.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, erasingDelay);
+    } else {
+        phraseIndex++;
+        setTimeout(type, typingDelay);
+    }
+}
+
+type(); // Start the typewriter animation
