@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Contact</title>
+<title>Portfolio</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="contact.css" rel="stylesheet" type="text/css" />
+<link href="portfolio.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
 crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -18,172 +18,38 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 </style>
 <body>
 
-   
- <section class="container contact" id="contact">
-            <div class="contact-container">
-                <div class="main-title">
-                    <h2>Contact <span>Me</span><span class="bg-text">Contact</span></h2>
-                </div>
-                <div class="contact-content-con">
-                    <div class="left-contact">
-                        <h4>Contact me here</h4>
-                        <p>
-                          “Winners don’t make excuses when the other side plays the game.”
-                        </p>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>Location</span>
-                                </div>
-                                <p>
-                                    : Singaapore
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>Email</span>
-                                </div>
-                                <p>
-                                    <span>: reivax.caasi@gmail</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Education</span>
-                                </div>
-                                <p>
-                                    <span>: Ngee Ann Polytechnic</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Mobile Number</span>
-                                </div>
-                                <p>
-                                    <span>: +65 9871-1801</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-globe-africa"></i>
-                                    <span>Languages</span>
-                                </div>
-                                <p>
-                                    <span>: English, Chinese</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="contact-icons">
-                            <div class="contact-icon">
-                                <a href="https://isaacxavier.weebly.com/" target="_blank">
-                                                                                              <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>                                         
-                                    <i class='fa fa-address-card'></i>
-                                </a>
-                                <a href=" mailto:reivax.caasi@gmail.com?subject=%3CYour%20Questions%3E&body=Hello%20Isaac%2C%0D%0A%0D%0A%0D%0A%3CYour%20input%3E%0D%0A%0D%0A%0D%0A%3CYour%20email%3E%0D%0A%0D%0A%0D%0A%0D%0A"
-                                  target="_blank">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                                <a href="https://github.com/Isaacxavierlee" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-      <a href="https://63b1a3f4905e0.site123.me/" target="_blank">
-                                  
-      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>                                                                          <i class='fa fa-shopping-cart'></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="right-contact">
-                    <div class="input-control i-c-2">
-                                                 
-                            </div>
+ <nav class="sticky-bar">
+    <div class="menu">
+    <button id="theme-toggle"><i class="fas fa-adjust"></i></button>
 
-                          
-                            
-                          
-                            <div class="submit-btn">
-  <a href="#" class="main-btn" id="downloadBtn">
-    <span class="btn-text">Recommendation Letter</span>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-    <span class="btn-icon"><i class='fa fa-handshake-o'></i></span>
-  </a>
+
+
+<div class="controls-container">
+    <div class="controls">
+        <a href="./index.html" class="control active-btn">
+            <i class="fas fa-home control-icon"></i>
+        </a>
+        <a href="./about.html" class="control">
+            <i class="fas fa-user control-icon"></i>
+        </a>
+        <a href="./portfolio.html" class="control">
+            <i class="fas fa-briefcase control-icon"></i>
+        </a>
+        <a href="./project.html" class="control">
+            <i class="far fa-newspaper control-icon"></i>
+        </a>
+        <a href="./contact.html" class="control">
+            <i class="fas fa-envelope-open control-icon"></i>
+        </a>
+    </div>
 </div>
 
-<script>
-  var downloadBtn = document.getElementById("downloadBtn");
-  downloadBtn.addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent default link behavior
-
-    var fileUrl = "img/Isaac Xavier Recommendation Letters.pdf";
-    var link = document.createElement("a");
-    link.href = fileUrl;
-    link.download = "Isaac Xavier Recommendation Letters.pdf";
-    link.click();
-  });
-</script>
-
-                                </a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-  <nav class="bottom-navigation">
-  <a href="./index.html" class="nav-item" data-id="home">
-    <i class="fas fa-home"></i>
-  </a>
-
-  <a href="./about.html" class="nav-item" data-id="about">
-    <i class="fas fa-user"></i>
-  </a>
-
-  <a href="./portfolio.html" class="nav-item" data-id="portfolio">
-    <i class="fas fa-briefcase"></i>
-  </a>
-
-  <a href="./project.html" class="nav-item" data-id="blogs">
-    <i class="far fa-newspaper"></i>
-  </a>
-
-  <a href="./contact.html" class="nav-item" data-id="contact">
-    <i class="fas fa-envelope-open"></i>
-  </a>
-</nav>
-
-
-
-
+      <div class="theme-btn">
+    <span>
+        <i class="fas fa-bars"></i>
+    </span>
+</div>
+<script src="contact.js"></script>
 
 
 
@@ -193,7 +59,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   
 </body>
-<script src="script.js"></script>
+
 <footer>
 </footer>
 </html>

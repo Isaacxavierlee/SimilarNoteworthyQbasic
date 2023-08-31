@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
 const phrases = [
     "Welcome to my webpage.",
     "Hi, I'm Isaac Xavier.",
-    "A Web Developer.",
+    "I am a Web Developer.",
     "Sharing my thoughts and ideas.",
     "Showcasing my projects."
 ];
@@ -74,3 +74,16 @@ function erase() {
 }
 
 type(); // Start the typewriter animation
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const controlsContainer = document.querySelector(".controls-container");
+    const controls = document.querySelector(".controls");
+    const themeBtn = document.querySelector(".theme-btn");
+
+    themeBtn.addEventListener("click", function () {
+        controls.classList.toggle("hidden");
+    });
+});

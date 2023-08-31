@@ -591,6 +591,11 @@ p {
   }
 }
 
+.controls-container .controls a {
+        text-decoration: none; /* Remove the underline */
+    }
+
+
 .controls {
   position: fixed;
   z-index: 10;
@@ -628,6 +633,10 @@ p {
   color: var(--color-white);
 }
 
+.controls.hidden {
+    display: none;
+}
+
 .theme-btn {
   top: 5%;
   right: 3%;
@@ -651,3 +660,17 @@ p {
   color: var(--color-grey-2);
   pointer-events: none;
 }
+
+.controls.light-mode .control i {
+    color: var(--color-grey-2);
+}
+
+.controls.dark-mode .control i {
+    color: var(--color-white);
+}
+
+.controls .active-btn i {
+    color: var(--color-white);
+}
+
+
