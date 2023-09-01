@@ -111,9 +111,9 @@ body {
 }
 
 .controls-container .controls a {
-        text-decoration: none; /* Remove the underline */
-    }
-
+    text-decoration: none; /* Remove the underline */
+    transition: background-color 0.4s ease-in-out;
+}
 
 .controls {
   position: fixed;
@@ -126,6 +126,7 @@ body {
   justify-content: center;
   transform: translateY(-50%);
 }
+
 .controls .control {
   padding: 1rem;
   cursor: pointer;
@@ -139,19 +140,26 @@ body {
   margin: 0.7rem 0;
   box-shadow: var(--box-shadow-1);
 }
+
 .controls .control i {
   font-size: 1.2rem;
   color: var(--color-grey-2);
   pointer-events: none;
+  transition: color 0.4s ease-in-out; /* Add transition for icon color change */
 }
+
 .controls .active-btn {
   background-color: var(--color-secondary);
   transition: all 0.4s ease-in-out;
 }
+
 .controls .active-btn i {
   color: var(--color-white);
 }
 
+.controls .active-btn i {
+  color: var(--color-white);
+}
 
 .theme-btn {
   top: 5%;
@@ -168,9 +176,11 @@ body {
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.1s ease-in-out;
 }
+
 .theme-btn:active {
   transform: translateY(-3px);
 }
+
 .theme-btn i {
   font-size: 1.4rem;
   color: var(--color-grey-2);
@@ -188,6 +198,7 @@ body {
 .controls .active-btn i {
     color: var(--color-white);
 }
+
 
 
 
