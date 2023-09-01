@@ -328,16 +328,6 @@ p {
   /* Slightly increase the scale on hover */
 }
 
-/* Set the background image for intro-image in dark mode */
-.intro-left.dark-mode .intro-image {
-  background-image: url('/img/suit.jpg'); /* Dark mode image */
-}
-
-/* Set the background image for intro-image in light mode */
-.intro-left.light-mode .intro-image {
-  background-image: url('/img/checker.jpg'); /* Light mode image */
-}
-
 
 .intro-right {
   flex: 2;
@@ -399,7 +389,7 @@ p {
   display: block;
   /* Show active section */
 }
-
+/* General styles for .intro-section */
 .intro-section {
   display: flex;
   align-items: center;
@@ -409,58 +399,63 @@ p {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   background-color: var(--color-primary);
-  background-image: url('/img/suit.jpg');
-  /* Set your background image path */
+  background-image: url('/img/suit.jpg'); /* Set your background image path */
   background-size: cover;
   background-position: center;
   /* Adjust the margin-top value to create separation from the navigation */
-  margin-bottom: 50px;
-  /* Add margin to create distance from the content below */
+  margin-bottom: 50px; /* Add margin to create distance from the content below */
 }
 
-
+/* Light mode styles for .intro-section */
 .light-mode .intro-section {
-  background-image: url('/img/checker.jpg');
-  /* Light mode background image */
+  background-image: url('/img/checker.jpg'); /* Light mode background image */
 }
 
+/* Styles for .intro-left */
+.intro-left {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%; /* Make it a circle */
+  border: 5px solid var(--color-secondary); /* Default border color */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s; /* Add transition for border color */
+}
 
+/* Light mode styles for .intro-left */
+.light-mode .intro-left {
+  border-color: #94847a; /* Change border color to beige in light mode */
+}
 
-
-
-
-
-
-
-
+/* Styles for .intro-image */
 .intro-image {
   width: 100%;
   height: auto;
   display: block;
   transition: transform 0.3s;
-  border-radius: 5px;
-  /* Add a subtle border-radius */
+  border-radius: 5px; /* Add a subtle border-radius */
 }
 
+/* Hover effect for .intro-image */
 .intro-image:hover {
-  transform: scale(1.05);
-  /* Slightly increase the scale on hover */
+  transform: scale(1.05); /* Slightly increase the scale on hover */
 }
 
+/* Styles for .intro-right */
 .intro-right {
   flex: 2;
   padding-left: 40px;
-  color: var(--color-white);
-  /* Set text color to white */
+  color: var(--color-white); /* Set text color to white */
 }
 
+/* Styles for .intro-right h2 */
 .intro-right h2 {
   font-size: 28px;
   margin-bottom: 15px;
-  color: var(--color-secondary);
-  /* Use the secondary color for the heading */
+  color: var(--color-secondary); /* Use the secondary color for the heading */
 }
 
+/* Styles for .intro-right p */
 .intro-right p {
   font-size: 16px;
   line-height: 1.5;
@@ -468,6 +463,7 @@ p {
   margin-bottom: 30px;
 }
 
+/* Styles for .btn */
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -478,25 +474,25 @@ p {
   transition: background-color 0.3s;
 }
 
+/* Hover effect for .btn */
 .btn:hover {
   background-color: var(--color-secondary-light);
 }
 
+/* Light mode styles for .intro-right */
 .light-mode .intro-right {
-  color: var(--color-white);
-  /* Set text color to dark grey */
+  color: var(--color-white); /* Set text color to dark grey */
 }
 
+/* Light mode styles for .intro-right h2 */
 .light-mode .intro-right h2 {
-  color: #94847a;
-  /* Use the secondary color for the heading */
+  color: #94847a; /* Use the secondary color for the heading */
 }
 
+/* Light mode styles for .intro-right p */
 .light-mode .intro-right p {
-  color: var(--color-white);
-  /* Use the grey-3 color for the paragraph text */
+  color: var(--color-white); /* Use the grey-3 color for the paragraph text */
 }
-
 
 /* Common styles for both light and dark modes */
 .sticky-bar a,
