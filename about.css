@@ -204,7 +204,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 10px; /* Adjust the top padding to move it under the sticky bar */
+  padding-top: 30px; /* Adjust the top padding to move it under the sticky bar */
   text-align: center; /* Center the content */
 }
 
@@ -227,6 +227,85 @@ body {
   margin: 10px auto; /* Center the line and adjust the margin as needed */
 }
 
+.skills-container {
+  border: 2px solid var(--color-secondary); /* Default border style */
+  border-radius: 15px; /* Adjust border radius for the container */
+  padding: 20px; /* Add padding to create space around the skills */
+  max-width: 800px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  transition: border 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+.skills-container:hover {
+  border-color: var(--color-secondary); /* Change border color on hover */
+  border-style: dashed; /* Change border style on hover */
+}
+
+.skills-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start; /* Align items at the top of each skill box */
+  text-align: center; /* Center text within each skill */
+}
+
+.skill {
+  width: calc(25% - 20px); /* Smaller width for each skill box */
+  border: 1px solid var(--color-grey-5);
+  padding: 15px; /* Smaller padding for the skill boxes */
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  background-color: var(--color-primary-light);
+}
+
+.skill:hover {
+  transform: scale(1.05);
+  border-color: var(--color-secondary);
+  background-color: var(--color-primary);
+}
+
+.skill-icon {
+  font-size: 20px; /* Smaller icon size */
+  color: var(--color-secondary);
+  margin-bottom: 5px; /* Reduced space below the icon */
+}
+
+.skill-label {
+  font-weight: bold;
+  font-size: 14px; /* Smaller font size for skill labels */
+}
+
+.progress-bar {
+  height: 10px; /* Smaller progress bar height */
+  background-color: var(--color-secondary);
+  border-radius: 5px; /* Smaller border radius */
+  margin-top: 8px; /* Adjusted margin-top for progress bars */
+  position: relative;
+}
+
+.percentage {
+  font-weight: bold;
+  color: var(--color-secondary);
+  font-size: 12px; /* Smaller font size for percentages */
+  margin-top: 3px; /* Reduced margin-top for percentages */
+}
+
+
+.skills-container {
+  text-align: center;
+  margin-top: 40px; /* Add margin-top to create space */
+}
+
+
+.skills-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--color-secondary); /* Title color */
+}
+
 .skills-box {
   display: flex;
   flex-wrap: wrap;
@@ -235,45 +314,7 @@ body {
   align-items: center; /* Center skills vertically */
 }
 
-.skill {
-  width: calc(33.33% - 20px); /* Three skills per row with spacing */
-  border: 1px solid var(--color-grey-5); /* Border for the skills */
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  position: relative;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-  background-color: var(--color-primary-light); /* Background color */
-}
 
-.skill:hover {
-  transform: scale(1.05); /* Enlarge on hover */
-}
-
-.skill-icon {
-  font-size: 24px;
-  color: var(--color-secondary); /* Icon color */
-}
-
-.skill-label {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-.progress-bar {
-  position: relative;
-  height: 15px;
-  background-color: var(--color-secondary); /* Progress bar background color */
-  border-radius: 10px;
-  margin-top: 10px;
-}
-
-.percentage {
-  font-weight: bold;
-  color: var(--color-secondary); /* Percentage text color */
-  margin-top: 5px;
-}
 
 
 
