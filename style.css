@@ -22,9 +22,9 @@
 }
 
 .light-mode {
-  --color-primary: #DDD0C8;
+  --color-primary: #ffffff;
   /* Beige color */
-  --color-secondary: #323232;
+  --color-secondary: #0094f0;
   /* Dark grey color */
   --color-white: #FFFFFF;
   --color-black: #000;
@@ -268,7 +268,7 @@ p {
   display: none;
   /* Initially hide all sections */
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #0094f0;
 }
 
 .section.active {
@@ -294,7 +294,7 @@ p {
   display: none;
   /* Initially hide all sections */
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #0094f0;
 }
 
 .section.active {
@@ -382,7 +382,7 @@ p {
   display: none;
   /* Initially hide all sections */
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #0094f0;
 }
 
 .section.active {
@@ -424,7 +424,7 @@ p {
 
 /* Light mode styles for .intro-left */
 .light-mode .intro-left {
-  border-color: #94847a; /* Change border color to beige in light mode */
+  border-color: #ffffff; /* Change border color to beige in light mode */
 }
 
 /* Styles for .intro-image */
@@ -486,7 +486,7 @@ p {
 
 /* Light mode styles for .intro-right h2 */
 .light-mode .intro-right h2 {
-  color: #94847a; /* Use the secondary color for the heading */
+  color: var(--color-dark); /* Use the secondary color for the heading */
 }
 
 /* Light mode styles for .intro-right p */
@@ -542,7 +542,7 @@ p {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-light);
   min-width: 160px;
   z-index: 1;
   border-radius: var(--br-sm-2);
@@ -589,6 +589,44 @@ p {
     font-size: 14px;
   }
 }
+
+.light-mode .sticky-bar {
+  background-color: var(--color-primary-light); /* Light background color */
+}
+
+.light-mode .sticky-bar a,
+.light-mode .sticky-bar button {
+  color: var(--color-dark); /* Light theme text color */
+  /* ... other light theme styles ... */
+}
+
+.light-mode .sticky-bar a:hover {
+  color: var(--color-secondary); /* Light theme hover color */
+  /* ... other light theme styles ... */
+}
+
+.light-mode .sticky-bar button:hover {
+  color: var(--color-secondary); /* Light theme hover color */
+  /* ... other light theme styles ... */
+}
+
+.light-mode .dropdown-content {
+  background-color: var(--color-primary-light); /* Light background color */
+  /* ... other light theme styles ... */
+}
+
+.light-mode .dropdown-content a:hover {
+  background-color: var(--color-grey-1); /* Light theme hover background color */
+  /* ... other light theme styles ... */
+}
+
+
+
+
+
+
+
+
 
 .controls-container .controls a {
         text-decoration: none; /* Remove the underline */
