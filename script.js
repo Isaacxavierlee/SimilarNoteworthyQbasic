@@ -40,14 +40,26 @@ const typewriter = document.getElementById('typewriter');
 let phraseIndex = 0;
 let charIndex = 0;
 
+function isMobileDevice() {
+    return window.innerWidth <= 768; // Adjust the screen width threshold as needed
+}
+
+function getTypingDelay() {
+    return isMobileDevice() ? 150 : 100; // Adjust typing speed for mobile and desktop
+}
+
+function getErasingDelay() {
+    return isMobileDevice() ? 100 : 50; // Adjust erasing speed for mobile and desktop
+}
+
 function type() {
     if (phraseIndex >= phrases.length) {
         phraseIndex = 0;
     }
 
     const currentPhrase = phrases[phraseIndex];
-    const typingDelay = 100; // Adjust typing speed here
-    const erasingDelay = 50; // Adjust erasing speed here
+    const typingDelay = getTypingDelay();
+    const erasingDelay = getErasingDelay();
 
     if (charIndex < currentPhrase.length) {
         typewriter.textContent += currentPhrase.charAt(charIndex);
@@ -60,8 +72,8 @@ function type() {
 
 function erase() {
     const currentPhrase = phrases[phraseIndex];
-    const typingDelay = 1000; // Adjust typing speed here
-    const erasingDelay = 100; // Adjust erasing speed here
+    const typingDelay = getTypingDelay();
+    const erasingDelay = getErasingDelay();
 
     if (charIndex > 0) {
         typewriter.textContent = currentPhrase.substring(0, charIndex - 1);
@@ -76,8 +88,6 @@ function erase() {
 type(); // Start the typewriter animation
 
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const controlsContainer = document.querySelector(".controls-container");
     const controls = document.querySelector(".controls");
@@ -86,4 +96,32 @@ document.addEventListener("DOMContentLoaded", function () {
     themeBtn.addEventListener("click", function () {
         controls.classList.toggle("hidden");
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 });

@@ -311,9 +311,10 @@ p {
   border: 5px solid var(--color-secondary);
   /* Add a border */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, background 0.3s; /* Add transition for border color and background */
 }
 
-.intro-image {
+.intro-left .intro-image {
   width: 100%;
   height: auto;
   display: block;
@@ -322,10 +323,21 @@ p {
   /* Add a subtle border-radius */
 }
 
-.intro-image:hover {
+.intro-left .intro-image:hover {
   transform: scale(1.05);
   /* Slightly increase the scale on hover */
 }
+
+/* Set the background image for intro-image in dark mode */
+.intro-left.dark-mode .intro-image {
+  background-image: url('/img/suit.jpg'); /* Dark mode image */
+}
+
+/* Set the background image for intro-image in light mode */
+.intro-left.light-mode .intro-image {
+  background-image: url('/img/checker.jpg'); /* Light mode image */
+}
+
 
 .intro-right {
   flex: 2;
@@ -412,22 +424,13 @@ p {
   /* Light mode background image */
 }
 
-.intro-left {
-  flex: 1;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  border: 5px solid var(--color-secondary);
-  /* Add a border */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 
-}
 
-.light-mode .intro-left {
-  border: 5px solid #94847a;
-  /* Change border color to beige in light mode */
 
-}
+
+
+
+
 
 
 .intro-image {
