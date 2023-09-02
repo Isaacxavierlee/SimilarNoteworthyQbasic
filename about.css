@@ -22,12 +22,12 @@
 }
 
 .light-mode {
-  --color-primary: #ffffff;
+  --color-primary: #FFFFFF;
   /* Beige color */
   --color-secondary: #0094f0;
   /* Dark grey color */
   --color-white: #FFFFFF;
-  --color-black: #000;
+  --color-black: #454e56;
   --color-grey0: #f8f8f8;
   --color-grey-1: #dbe1e8;
   --color-grey-2: #b2becd;
@@ -228,43 +228,30 @@ body {
 }
 
 .skills-container {
-  border: 2px solid var(--color-secondary); /* Default border style */
-  border-radius: 15px; /* Adjust border radius for the container */
-  padding: 20px; /* Add padding to create space around the skills */
   max-width: 800px; /* Set a maximum width for the container */
   margin: 0 auto; /* Center the container horizontally */
-  transition: border 0.3s ease-in-out; /* Add transition for smooth effect */
 }
 
-.skills-container:hover {
-  border-color: var(--color-secondary); /* Change border color on hover */
-  border-style: dashed; /* Change border style on hover */
+.swiper-container {
+  padding: 20px; /* Add padding to create space around the swiper */
 }
 
-.skills-box {
+.swiper-slide {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  align-items: flex-start; /* Align items at the top of each skill box */
+  flex-direction: column;
+  align-items: center;
   text-align: center; /* Center text within each skill */
-}
-
-.skill {
-  width: calc(25% - 20px); /* Smaller width for each skill box */
-  border: 1px solid var(--color-grey-5);
-  padding: 15px; /* Smaller padding for the skill boxes */
-  border-radius: 10px;
-  position: relative;
+  padding: 20px; /* Add padding to each skill slide */
+  border-radius: 15px; /* Adjust border radius for each skill slide */
+  border: 2px solid var(--color-secondary); /* Default border style for each skill slide */
+  overflow: hidden; /* Hide content that overflows the skill slide */
+  transition: border 0.3s ease-in-out, transform 0.2s ease-in-out; /* Add transitions for smooth effects */
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-  background-color: var(--color-primary-light);
 }
 
-.skill:hover {
-  transform: scale(1.05);
-  border-color: var(--color-secondary);
-  background-color: var(--color-primary);
+.swiper-slide:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  border-color: var(--color-secondary); /* Change border color on hover */
 }
 
 .skill-icon {
@@ -280,39 +267,80 @@ body {
 
 .progress-bar {
   height: 10px; /* Smaller progress bar height */
-  background-color: var(--color-secondary);
   border-radius: 5px; /* Smaller border radius */
   margin-top: 8px; /* Adjusted margin-top for progress bars */
   position: relative;
+  width: 100%; /* Set a default width of 100% */
+  max-width: 100%; /* Set a maximum width of 100% */
+  
+  /* Set a linear gradient background */
+  background-image: linear-gradient(
+    to right,
+    var(--color-secondary) 0%,
+    var(--color-secondary) var(--progress),
+    var(--color-gap) var(--progress),
+    var(--color-gap) 100%
+  );
+
+  /* Transition for smooth width changes */
+  transition: width 0.3s ease-in-out;
+}
+
+/* Use inline styles to set the width based on the progress percentage */
+.progress-bar[data-progress] {
+  width: var(--progress); /* Set the width based on a data attribute */
+}
+
+/* Rest of your CSS */
+
+/* Define your custom colors */
+:root {
+  --color-gap: #ccc; /* Color for the gap between progress and 100% */
 }
 
 .percentage {
   font-weight: bold;
   color: var(--color-secondary);
-  font-size: 12px; /* Smaller font size for percentages */
-  margin-top: 3px; /* Reduced margin-top for percentages */
+  font-size: 16px; /* Adjusted font size for percentages */
+  margin-top: 10px; /* Adjusted margin-top for percentages */
 }
 
 
-.skills-container {
-  text-align: center;
-  margin-top: 40px; /* Add margin-top to create space */
+/* Additional styling for the swiper navigation buttons (optional) */
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--color-secondary); /* Button color */
+  font-size: 24px; /* Button size */
 }
 
-
-.skills-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: var(--color-secondary); /* Title color */
+/* Center the swiper navigation buttons horizontally */
+.swiper-button-prev {
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.skills-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center; /* Center skills horizontally */
-  align-items: center; /* Center skills vertically */
+.swiper-button-next {
+  right: 50%;
+  transform: translateX(50%);
 }
+.swiper-slide-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Place it behind the skill content */
+  filter: blur(4px); /* Add a blur effect to the background */
+  transition: filter 0.3s ease-in-out; /* Add transition for the blur effect */
+}
+
+/* Style for the swiper slide on hover */
+.swiper-slide:hover .swiper-slide-bg {
+  filter: none; /* Remove the blur effect on hover */
+}
+
 
 
 

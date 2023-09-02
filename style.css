@@ -22,12 +22,12 @@
 }
 
 .light-mode {
-  --color-primary: #ffffff;
+  --color-primary: #FFFFFF;
   /* Beige color */
   --color-secondary: #0094f0;
   /* Dark grey color */
   --color-white: #FFFFFF;
-  --color-black: #000;
+  --color-black: #454e56;
   --color-grey0: #f8f8f8;
   --color-grey-1: #dbe1e8;
   --color-grey-2: #b2becd;
@@ -294,7 +294,7 @@ p {
   display: none;
   /* Initially hide all sections */
   padding: 20px;
-  background-color: #0094f0;
+  background-color: #454e56;
 }
 
 .section.active {
@@ -424,7 +424,7 @@ p {
 
 /* Light mode styles for .intro-left */
 .light-mode .intro-left {
-  border-color: #ffffff; /* Change border color to beige in light mode */
+  border-color: #454e56; /* Change border color to beige in light mode */
 }
 
 /* Styles for .intro-image */
@@ -467,7 +467,7 @@ p {
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: var(--color-secondary);
+  background-color: #454e56;
   color: var(--color-white);
   text-decoration: none;
   border-radius: 5px;
