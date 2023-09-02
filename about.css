@@ -343,7 +343,11 @@ body {
 }
 
 
-
+@media (max-width: 768px) {
+  .swiper-slide {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+}
 
 
 
