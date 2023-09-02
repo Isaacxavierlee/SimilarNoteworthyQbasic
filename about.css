@@ -261,6 +261,7 @@ body {
 }
 
 .skill-label {
+  color: white;
   font-weight: bold;
   font-size: 14px; /* Smaller font size for skill labels */
 }
@@ -300,7 +301,7 @@ body {
 
 .percentage {
   font-weight: bold;
-  color: var(--color-secondary);
+  color: white;
   font-size: 16px; /* Adjusted font size for percentages */
   margin-top: 10px; /* Adjusted margin-top for percentages */
 }
