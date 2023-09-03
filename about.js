@@ -37,4 +37,8 @@ document.addEventListener("DOMContentLoaded", function() {
       icon.parentElement.classList.add('active-btn');
     }
   });
+
+
+  // Add your existing event listeners here
+  
 });

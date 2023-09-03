@@ -38,10 +38,9 @@
 }
 
 body.light-mode {
-  background-color:#DDD0C8;
+  background: linear-gradient(to bottom, #A0D2EB, #E6EAF3, #D08DF4, #8559B1, #4A4D60);
   color: var(--color-black);
 }
-
 
 /* Add more styles using the light mode color scheme */
 
