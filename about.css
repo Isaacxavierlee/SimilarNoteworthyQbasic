@@ -227,9 +227,9 @@ body {
   margin: 10px auto; /* Center the line and adjust the margin as needed */
 }
 .skills-container {
-  max-width: 800px;
+  max-width: 100%;
   margin: 20px auto; /* Add margin to create space */
-  padding: 30px;
+  padding: 20px;
   text-align: center;
   background-color: #F0F4F8;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
