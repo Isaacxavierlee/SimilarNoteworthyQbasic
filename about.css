@@ -88,6 +88,8 @@ body {
 @media (max-width: 768px) {
   .sticky-bar {
     padding: 5px 0;
+    position: relative; /* Add relative positioning to establish stacking context */
+  z-index: 2; /* Ensure the hamburger button is above other content */
   }
   
   .sticky-bar a,
