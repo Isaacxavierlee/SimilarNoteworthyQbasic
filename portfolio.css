@@ -456,3 +456,16 @@ body.dark-mode .portfolio-title {
 .portfolio-title span:first-child::after {
   content: none; /* Remove underline for the 'My' part */
 }
+
+/* Add this CSS for mobile responsiveness */
+@media (max-width: 768px) {
+  .portfolios {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .portfolios .portfolio-item {
+    margin-bottom: 2rem; /* Add space between stacked items */
+  }
+}
+
