@@ -38,9 +38,21 @@
 }
 
 body.light-mode {
-  background: linear-gradient(to bottom, #A0D2EB, #E6EAF3, #D08DF4, #8559B1, #4A4D60);
+  background: linear-gradient(135deg, #A0D2EB, #E6EAF3, #D08DF4, #8559B1, #4A4D60);
+  background-size: 200% 200%;
+  animation: gradientBG 10s linear infinite;
   color: var(--color-black);
 }
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 
 /* Add more styles using the light mode color scheme */
 
@@ -197,6 +209,7 @@ body {
 }
 
 .theme-btn {
+  z-index: 10;
   top: 5%;
   right: 3%;
   width: 70px;
@@ -232,3 +245,214 @@ body {
     color: var(--color-white);
 }
 
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #FFFFFF, #E5E5E5, #FCA311, #13213C, #000000);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s linear infinite;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.introduction-content {
+  max-width: 800px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.introduction-title {
+  font-size: 36px; /* Larger font size for impact */
+  color: #4A4D60; /* Text color */
+  margin-bottom: 10px; /* Spacing between title and text */
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Increased letter-spacing for style */
+  font-weight: bold;
+}
+
+.introduction-subtitle {
+  font-size: 24px;
+  color: #8559B1; /* Subtitle color */
+  margin-bottom: 20px; /* Spacing between subtitle and content */
+  font-weight: bold;
+}
+
+.introduction p {
+  font-size: 18px; /* Larger font size for readability */
+  color: #4A4D60;
+  line-height: 1.6;
+  margin-top: 15px; /* Slightly more spacing between paragraphs */
+}
+
+.introduction a {
+  color: #8559B1; /* Link color */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.introduction a:hover {
+  color: #4A4D60; /* Change link color on hover */
+}
+
+.port-text {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* Adjust profile title styling */
+.port-text h1 {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+/* Center the portfolio title */
+.portfolios-title {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.portfolios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 3rem;
+}
+.portfolios .portfolio-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.portfolios .portfolio-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.portfolios .portfolio-item .hover-items {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s ease-in-out;
+  max-width: 100%;
+  max-height: 100%;
+}
+.portfolios .portfolio-item .hover-items h3 {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+}
+.portfolios .portfolio-item .hover-items .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolios .portfolio-item .hover-items .icons .icon {
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.portfolios .portfolio-item .hover-items .icons .icon i {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin: 0 1rem;
+}
+.portfolios .portfolio-item .hover-items .icons .icon:hover {
+  background-color: var(--color-white);
+}
+.portfolios .portfolio-item .hover-items .icons .icon:hover i {
+  color: var(--color-primary);
+}
+
+.portfolio-item:hover .hover-items {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Style for the portfolio title */
+
+
+.portfolio-title span {
+  position: relative; /* Create a relative positioning context for the spans */
+  z-index: 1; /* Ensure spans appear above the underline */
+}
+
+.port-text {
+  text-align: center; /* Center-align the paragraph text */
+}
+
+/* Dark theme styles */
+body.light-mode .portfolio-title {
+  color: var(--color-black); /* Change title color for dark theme */
+}
+
+/* Light theme styles */
+body.dark-mode .portfolio-title {
+  color: var(--color-white); /* Change title color for light theme */
+}
+
+.main-title {
+  text-align: center; /* Center the text */
+  margin-bottom: 2rem; /* Increase spacing between title and content */
+}
+
+.portfolio-title {
+  font-size: 2rem;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.portfolio-title span {
+  color: var(--color-secondary); /* Color for the 'Portfolio' part */
+}
+
+/* Center the 'Portfolio' text */
+.portfolio-title span:first-child {
+  display: block;
+}
+
+.portfolio-title::before,
+.portfolio-title::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 30%; /* Adjust the width as needed */
+  border-bottom: 2px solid var(--color-secondary); /* Underline color */
+  margin-top: 5px; /* Spacing between title and underline */
+}
+
+.portfolio-title span:first-child::before,
+.portfolio-title span:first-child::after {
+  content: none; /* Remove underline for the 'My' part */
+}

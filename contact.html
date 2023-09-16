@@ -54,16 +54,42 @@
       </div>
       <script src="contact.js"></script>
 
+</head>
+<body>
+  <header class="header">
+    <h1>Contact Me</h1>
+    <p>Feel free to drop me a message!</p>
+  </header>
 
+  <main>
+    <div class="email-form">
+      <h2>Send me an Email</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit">Send Email</button>
+        </div>
+      </form>
+    </div>
+  </main>
 
-
-
-
-
+  
+<footer>
+</footer>
 
 </body>
 
-<footer>
-</footer>
+
 
 </html>

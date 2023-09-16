@@ -89,8 +89,7 @@ body {
   .sticky-bar {
     padding: 5px 0;
     position: relative; /* Add relative positioning to establish stacking context */
-  z-index: 2; /* Ensure the hamburger button is above other content */
-  }
+   }
   
   .sticky-bar a,
   .sticky-bar button {
@@ -109,13 +108,32 @@ body {
   }
 }
 .controls.hidden {
-    display: none;
+  display: none;
 }
 
 .controls-container .controls a {
-    text-decoration: none; /* Remove the underline */
-    transition: background-color 0.4s ease-in-out;
+  text-decoration: none; /* Remove the underline */
+  transition: background-color 0.4s ease-in-out;
 }
+
+.controls {
+  position: fixed;
+  z-index: 1000; /* Ensure a high z-index to keep it above other elements */
+  top: calc(50% + 100px); /* Adjust the value to push the controls down */
+  right: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+}
+
+/* Rest of your existing control button styles */
+
+.controls-container .controls a {
+        text-decoration: none; /* Remove the underline */
+    }
+
 
 .controls {
   position: fixed;
@@ -128,7 +146,6 @@ body {
   justify-content: center;
   transform: translateY(-50%);
 }
-
 .controls .control {
   padding: 1rem;
   cursor: pointer;
@@ -142,28 +159,25 @@ body {
   margin: 0.7rem 0;
   box-shadow: var(--box-shadow-1);
 }
-
 .controls .control i {
   font-size: 1.2rem;
   color: var(--color-grey-2);
   pointer-events: none;
-  transition: color 0.4s ease-in-out; /* Add transition for icon color change */
 }
-
 .controls .active-btn {
   background-color: var(--color-secondary);
   transition: all 0.4s ease-in-out;
 }
-
 .controls .active-btn i {
   color: var(--color-white);
 }
 
-.controls .active-btn i {
-  color: var(--color-white);
+.controls.hidden {
+    display: none;
 }
 
 .theme-btn {
+  z-index: 10;
   top: 5%;
   right: 3%;
   width: 70px;
@@ -178,11 +192,9 @@ body {
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.1s ease-in-out;
 }
-
 .theme-btn:active {
   transform: translateY(-3px);
 }
-
 .theme-btn i {
   font-size: 1.4rem;
   color: var(--color-grey-2);
@@ -228,6 +240,8 @@ body {
   width: 100px; /* Adjust the width as needed */
   margin: 10px auto; /* Center the line and adjust the margin as needed */
 }
+
+
 .skills-container {
   max-width: 100%;
   margin: 20px auto; /* Add margin to create space */
@@ -336,60 +350,105 @@ body {
   color: var(--color-secondary);
 }
 
+/* ... Existing styles ... */
 
+.skill-card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+}
 
+.skill-card:hover .skill-card-inner,
+.skill-card.active .skill-card-inner {
+  transform: rotateY(180deg);
+}
 
+.skill-card-front,
+.skill-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
 
+.skill-card-front {
+  /* Styles for the front of the card */
+}
 
+.skill-card-back {
+  /* Styles for the back of the card */
+  transform: rotateY(180deg);
+}
 
+/* Rest of your existing styles for skill cards, icons, labels, and progress bars */
 
+/* Add a class to toggle the flip animation with JavaScript */
+.flip {
+  transform: rotateY(180deg);
+}
 
+/* Add a class to toggle the active state of the card */
+.active {
+  /* Add styles for the active state */
+}
 
+/* Add styles for the introduction section */
 
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #FFFFFF, #E5E5E5, #FCA311, #13213C, #000000);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s linear infinite;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
 
+.introduction-content {
+  max-width: 800px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
+.introduction-title {
+  font-size: 36px; /* Larger font size for impact */
+  color: #4A4D60; /* Text color */
+  margin-bottom: 10px; /* Spacing between title and text */
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Increased letter-spacing for style */
+  font-weight: bold;
+}
 
+.introduction-subtitle {
+  font-size: 24px;
+  color: #8559B1; /* Subtitle color */
+  margin-bottom: 20px; /* Spacing between subtitle and content */
+  font-weight: bold;
+}
 
+.introduction p {
+  font-size: 18px; /* Larger font size for readability */
+  color: #4A4D60;
+  line-height: 1.6;
+  margin-top: 15px; /* Slightly more spacing between paragraphs */
+}
 
+.introduction a {
+  color: #8559B1; /* Link color */
+  text-decoration: none;
+  transition: color 0.3s;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.introduction a:hover {
+  color: #4A4D60; /* Change link color on hover */
+}
 
 
 

@@ -1,103 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link href="style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<script src="makePage.js" defer></script>
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
-  
-  
 <body>
+    <nav class="sticky-bar">
+        <div class="menu">
+            <button id="theme-toggle"><i class="fas fa-adjust"></i></button>
+            <div class="dropdown">
+                <a href="#" class="about-link">About Me</a>
+                <div class="dropdown-content"></div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="portfolio-link">Portfolio</a>
+                <div class="dropdown-content">
+                    <!-- Portfolio Dropdown content -->
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="contact-link">Contact</a>
+                <div class="dropdown-content">
+                    <a href="mailto:reivax.caasi@gmail.com?subject=Inquiry%20Regarding%20Your%20Portfolio&body=Dear%20%5BRecruiter's%20Name%5D%2C%0D%0A%0D%0AI%20hope%20this%20email%20finds%20you%20well.%20My%20name%20is%20%5BYour%20Name%5D%2C%20and%20I%20am%20a%20%5BYour%20Profession%5D%20with%20a%20passion%20for%20%5BYour%20Area%20of%20Expertise%5D.%20I%20recently%20had%20the%20pleasure%20of%20sharing%20my%20portfolio%20webpage%20with%20you%2C%20and%20I'm%20thrilled%20to%20hear%20about%20your%20interest%20in%20my%20work.%0D%0A%0D%0AI%20appreciate%20your%20time%20in%20reviewing%20my%20projects%20and%20skills.%20I'm%20excited%20about%20the%20possibility%20of%20contributing%20my%20expertise%20to%20your%20team%20at%20%5BCompany%20Name%5D%20and%20making%20a%20positive%20impact.%20Your%20interest%20has%20motivated%20me%20to%20explore%20opportunities%20that%20align%20with%20my%20career%20aspirations.%0D%0A%0D%0AIf%20you%20have%20any%20questions%2C%20would%20like%20to%20discuss%20potential%20collaborations%2C%20or%20require%20additional%20information%2C%20please%20don't%20hesitate%20to%20reach%20out.%20I'm%20available%20for%20a%20call%20or%20meeting%20at%20your%20convenience.%20You%20can%20contact%20me%20via%20email%20at%20%5BYour%20Email%20Address%5D%20or%20by%20phone%20at%20%5BYour%20Phone%20Number%5D.%0D%0A%0D%0AThank%20you%20once%20again%20for%20your%20interest%20in%20my%20work.%20I%20look%20forward%20to%20the%20opportunity%20to%20further%20discuss%20how%20my%20skills%20and%20experiences%20could%20benefit%20%5BCompany%20Name%5D.%0D%0A%0D%0ABest%20regards%2C%0D%0A%5BYour%20Name%5D">
+                        <i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://www.linkedin.com/in/xiu-bo-isaac-xavier-lee-01a1a71b4/" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-  <nav class="sticky-bar">
-    <div class="menu">
-    <button id="theme-toggle"><i class="fas fa-adjust"></i></button>
-    <div class="dropdown">
-      <a href="#" class="about-link">About Me</a>
-      <div class="dropdown-content"></div>
+    <div class="container-with-background">
+        <div class="container">
+            <h1 class="name">
+                <span id="typewriter" class=""></span>
+                <span id="cursor">|</span>
+            </h1>
+        </div>
     </div>
-    <div class="dropdown">
-      <a href="#" class="portfolio-link">Portfolio</a>
-      <div class="dropdown-content">
-        <!-- Portfolio Dropdown content -->
-      </div>
+
+    <section class="intro-section">
+        <div class="intro-left">
+            <img src="/img/isaac.PNG" alt="Intro Image" class="intro-image">
+        </div>
+        <div class="intro-right">
+            <h2 class="intro-heading"> Welcome To My Universe </h2>
+            <p class="intro-text">
+                Greetings! I am Isaac, a distinguished professional in the realm of <span class="highlight">Industrial Automation</span> and <span class="highlight">Engineering Design</span>. With a proven record of excellence and a passion for collaborative innovation, I engineer cutting-edge solutions that redefine precision standards.
+                <br><br>
+                My repertoire includes analytical finesse, quantitative mastery, and a knack for solving intricate puzzles. Combined with my technological expertise and adept communication skills, I steer projects to success amidst the constellations of teamwork.
+                <br><br>
+                Beyond a professional, I am a catalyst for transformation. Each endeavor I undertake is a testament to my commitment to catalyzing growth and prosperity for organizations. Your consideration is the nucleus of opportunity, and I eagerly anticipate contributing to your esteemed team.
+            </p>
+            <a href="#" class="btn btn-cta">Embark On My Journey</a>
+        </div>
+    </section>
+
+    <div class="controls-container">
+        <div class="controls">
+            <a href="./index.html" class="control active-btn">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="./about.html" class="control">
+                <i class="fas fa-user"></i>
+            </a>
+            <a href="./portfolio.html" class="control">
+                <i class="fas fa-briefcase"></i>
+            </a>
+            <a href="./project.html" class="control">
+                <i class="far fa-newspaper"></i>
+            </a>
+            <a href="./contact.html" class="control">
+                <i class="fas fa-envelope-open"></i>
+            </a>
+        </div>
     </div>
-    <div class="dropdown">
-      <a href="#" class="contact-link">Contact</a>
-      <div class="dropdown-content">
-        <a href="mailto:reivax.caasi@gmail.com?subject=Inquiry%20Regarding%20Your%20Portfolio&body=Dear%20%5BRecruiter's%20Name%5D%2C%0D%0A%0D%0AI%20hope%20this%20email%20finds%20you%20well.%20My%20name%20is%20%5BYour%20Name%5D%2C%20and%20I%20am%20a%20%5BYour%20Profession%5D%20with%20a%20passion%20for%20%5BYour%20Area%20of%20Expertise%5D.%20I%20recently%20had%20the%20pleasure%20of%20sharing%20my%20portfolio%20webpage%20with%20you%2C%20and%20I'm%20thrilled%20to%20hear%20about%20your%20interest%20in%20my%20work.%0D%0A%0D%0AI%20appreciate%20your%20time%20in%20reviewing%20my%20projects%20and%20skills.%20I'm%20excited%20about%20the%20possibility%20of%20contributing%20my%20expertise%20to%20your%20team%20at%20%5BCompany%20Name%5D%20and%20making%20a%20positive%20impact.%20Your%20interest%20has%20motivated%20me%20to%20explore%20opportunities%20that%20align%20with%20my%20career%20aspirations.%0D%0A%0D%0AIf%20you%20have%20any%20questions%2C%20would%20like%20to%20discuss%20potential%20collaborations%2C%20or%20require%20additional%20information%2C%20please%20don't%20hesitate%20to%20reach%20out.%20I'm%20available%20for%20a%20call%20or%20meeting%20at%20your%20convenience.%20You%20can%20contact%20me%20via%20email%20at%20%5BYour%20Email%20Address%5D%20or%20by%20phone%20at%20%5BYour%20Phone%20Number%5D.%0D%0A%0D%0AThank%20you%20once%20again%20for%20your%20interest%20in%20my%20work.%20I%20look%20forward%20to%20the%20opportunity%20to%20further%20discuss%20how%20my%20skills%20and%20experiences%20could%20benefit%20%5BCompany%20Name%5D.%0D%0A%0D%0ABest%20regards%2C%0D%0A%5BYour%20Name%5D">
-          <i class="fas fa-envelope"></i> Email</a>
-        <a href="https://www.linkedin.com/in/xiu-bo-isaac-xavier-lee-01a1a71b4/" target="_blank">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-      </div>
+    <div class="theme-btn">
+        <span>
+            <i class="fas fa-bars"></i>
+        </span>
+        <script src="script.js"></script>
     </div>
-  </div>
-</nav>
-
-<div class="container-with-background">
-    <div class="container">
-        <h1 class="name">
-  <span id="typewriter" class=""></span>
-            <span id="cursor">|</span>
-        </h1>
-    </div>
-</div>
-
-
-   
-
-<section class="intro-section">
-  <div class="intro-left">
-    <img src="/img/isaac.PNG" alt="Intro Image" class="intro-image">
-  </div>
-  <div class="intro-right">
-    <h2 class="intro-heading"> Welcome To My Universe </h2>
-    <p class="intro-text">
-      Greetings! I am Isaac, a distinguished professional in the realm of <span class="highlight">Industrial Automation</span> and <span class="highlight">Engineering Design</span>. With a proven record of excellence and a passion for collaborative innovation, I engineer cutting-edge solutions that redefine precision standards.
-      <br><br>
-      My repertoire includes analytical finesse, quantitative mastery, and a knack for solving intricate puzzles. Combined with my technological expertise and adept communication skills, I steer projects to success amidst the constellations of teamwork.
-      <br><br>
-      Beyond a professional, I am a catalyst for transformation. Each endeavor I undertake is a testament to my commitment to catalyzing growth and prosperity for organizations. Your consideration is the nucleus of opportunity, and I eagerly anticipate contributing to your esteemed team.
-    </p>
-    <a href="#" class="btn btn-cta">Embark On My Journey</a>
-  </div>
-</section>
-
-<div class="controls-container">
-    <div class="controls">
-        <a href="./index.html" class="control active-btn">
-            <i class="fas fa-home"></i>
-        </a>
-        <a href="./about.html" class="control">
-            <i class="fas fa-user"></i>
-        </a>
-        <a href="./portfolio.html" class="control">
-            <i class="fas fa-briefcase"></i>
-        </a>
-        <a href="./project.html" class="control">
-            <i class="far fa-newspaper"></i>
-        </a>
-        <a href="./contact.html" class="control">
-            <i class="fas fa-envelope-open"></i>
-        </a>
-    </div>
-</div>
-<div class="theme-btn">
-    <span>
-        <i class="fas fa-bars"></i>
-    </span>
-</div>
-
-  <script src="script.js"></script>
 </body>
-
 </html>

@@ -38,7 +38,26 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+// Array of image sources
+const images = ["img/aboutme.jpg", "img/aboutme.jpg", "img/aboutme.jpg"]; // Add more image sources as needed
+let currentIndex = 0;
 
-  // Add your existing event listeners here
-  
+// Function to change the image
+function changeImage(offset) {
+  currentIndex += offset;
+
+  // Ensure the index stays within the bounds of the images array
+  if (currentIndex < 0) {
+    currentIndex = images.length - 1;
+  } else if (currentIndex >= images.length) {
+    currentIndex = 0;
+  }
+
+  // Update the image source
+  const imageElement = document.getElementById("image");
+  imageElement.src = images[currentIndex];
+}
+
+ 
+
 });
